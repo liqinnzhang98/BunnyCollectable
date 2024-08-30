@@ -18,13 +18,13 @@ export const Pages: CollectionConfig = {
             },
             required: true,
         },
-        {
-            name: 'layout',
-            label: 'Layout',
-            type: 'blocks',
-            blocks: [
+        // {
+        //     name: 'layout',
+        //     label: 'Layout',
+        //     type: 'blocks',
+        //     blocks: [
                 
-            ]
-        }
+        //     ]
+        // }
     ]
 }

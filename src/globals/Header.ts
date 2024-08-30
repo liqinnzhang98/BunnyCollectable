@@ -30,6 +30,7 @@ export const Header: GlobalConfig = {
             ],
             minRows: 1,
             maxRows: 5,
+            required: true,
         }
     ]
 }

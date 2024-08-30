@@ -92,7 +92,6 @@ export interface Page {
   id: string;
   name: string;
   slug: string;
-  layout?: unknown[] | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -137,13 +136,11 @@ export interface PayloadMigration {
 export interface Header {
   id: string;
   logo: string | Media;
-  nav?:
-    | {
-        label?: string | null;
-        link?: string | null;
-        id?: string | null;
-      }[]
-    | null;
+  nav: {
+    label?: string | null;
+    link?: string | null;
+    id?: string | null;
+  }[];
   updatedAt?: string | null;
   createdAt?: string | null;
 }
