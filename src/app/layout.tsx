@@ -1,7 +1,7 @@
 
 import '@/styles/globals.css'
 
-
+// for tailwindcss
 export default function RootLayout({
     children,
 }: {
