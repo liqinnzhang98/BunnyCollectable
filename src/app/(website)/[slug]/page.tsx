@@ -30,6 +30,13 @@ export async function generateStaticParams() {
         draft: false,
         limit: 1000,
     })
+
+
+    return pages.docs
+        ?.filter((doc) => {
+            return doc.slug !== 'index'
+        })
+        .map(({ slug }) => slug)
 }
 
 export default async function Page({ params: { slug = 'index' } }) {
@@ -39,14 +46,17 @@ export default async function Page({ params: { slug = 'index' } }) {
         slug,
     })
 
+    console.log(page)
+
     if (!page) {
         return notFound()
     }
 
+
     return (
         <article className='pt-16 pb-24'>
 
-        <RenderBlocks block={page.layout} />
+        <RenderBlocks blocks={page.layout} />
     </article>
     )
 
