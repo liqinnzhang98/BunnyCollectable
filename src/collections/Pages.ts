@@ -1,3 +1,6 @@
+import { Cover } from "@/blocks/cover/schema";
+import { Image } from "@/blocks/image/schema";
+import { RichText } from "@/blocks/richText/schema";
 import { CollectionConfig } from "payload";
 
 export const Pages: CollectionConfig = {
@@ -18,13 +21,15 @@ export const Pages: CollectionConfig = {
             },
             required: true,
         },
-        // {
-        //     name: 'layout',
-        //     label: 'Layout',
-        //     type: 'blocks',
-        //     blocks: [
-                
-        //     ]
-        // }
+        {
+            name: 'layout',
+            label: 'Layout',
+            type: 'blocks',
+            blocks: [
+                RichText,
+                Cover,
+                Image,
+            ]
+        }
     ]
 }

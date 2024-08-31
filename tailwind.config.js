@@ -4,8 +4,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        customPurple: '#443473',
+      },
+    },
   },
   plugins: [],
 }
-

@@ -12,6 +12,7 @@ import { s3Storage } from '@payloadcms/storage-s3'
 import { Pages } from './collections/Pages'
 import { Header } from './globals/Header'
 import { Footer } from './globals/Footers'
+import Customers from './collections/Customers'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -27,6 +28,7 @@ export default buildConfig({
     Users, 
     Media,
     Pages,
+    Customers,
   ],
   globals: [
     Header,
