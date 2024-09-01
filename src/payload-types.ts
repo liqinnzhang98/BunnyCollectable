@@ -226,6 +226,18 @@ export interface Header {
   nav: {
     label?: string | null;
     link?: string | null;
+    subItems?:
+      | {
+          label: string;
+          link?: string | null;
+          id?: string | null;
+        }[]
+      | null;
+    id?: string | null;
+  }[];
+  userLinks: {
+    label: string;
+    link: string;
     id?: string | null;
   }[];
   updatedAt?: string | null;
