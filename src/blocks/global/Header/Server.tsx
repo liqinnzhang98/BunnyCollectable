@@ -5,6 +5,7 @@ import config from '@payload-config'
 import React , { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+// import { useAuth } from '../../../utils/AuthContext'; // Adjust the import path
 
 type HeaderData = {
     nav: Array<{
@@ -34,6 +35,7 @@ export default function HeaderServer() {
     const [header, setHeader] = useState<HeaderData | null>(null);
     const [searchQuery, setSearchQuery] = useState<string>('');
     const [showButton, setShowButton] = useState<boolean>(false);
+    // const { isAuthenticated, logout } = useAuth();
 
     useEffect(() => {
         // Fetch header data from the public API endpoint
@@ -123,7 +125,9 @@ export default function HeaderServer() {
                 </button>
             )}
             </div>
-          <div className='flex space-x-4'>
+
+
+        <div className='flex space-x-4'>  
           {/* User Links */}
           {header.userLinks.map((link, index) => (
             <Link

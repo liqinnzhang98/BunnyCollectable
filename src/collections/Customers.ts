@@ -3,9 +3,6 @@ import { CollectionConfig } from 'payload';
 const Customers: CollectionConfig = {
   slug: 'customers', // The unique identifier for this collection
   auth: true, // Enable authentication for this collection
-  admin: {
-    useAsTitle: 'email', // Use the email field as the title in the admin panel
-  },
   fields: [
     {
       name: 'email',
@@ -39,13 +36,13 @@ const Customers: CollectionConfig = {
     },
     // Add other custom fields as needed
   ],
-  access: {
-    // Define access controls for the collection
-    read: ({ req: { user } }) => !!user, // Allow reading only for authenticated users
-    update: ({ req: { user } }) => !!user, // Allow updating only for authenticated users
-    create: () => true, // Allow anyone to create (register) a new customer
-    delete: ({ req: { user } }) => !!user, // Allow deletion only for authenticated users
-  },
+  // access: {
+  //   // Define access controls for the collection
+  //   read: ({ req: { user } }) => !!user, // Allow reading only for authenticated users
+  //   update: ({ req: { user } }) => !!user, // Allow updating only for authenticated users
+  //   create: () => true, // Allow anyone to create (register) a new customer
+  //   delete: ({ req: { user } }) => !!user, // Allow deletion only for authenticated users
+  // },
 };
 
 export default Customers;

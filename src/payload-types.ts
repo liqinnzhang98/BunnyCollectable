@@ -249,7 +249,7 @@ export interface Header {
  */
 export interface Footer {
   id: string;
-  logo: string | Media;
+  logo?: (string | null) | Media;
   nav?:
     | {
         label?: string | null;

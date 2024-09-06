@@ -8,7 +8,7 @@ export const Footer: GlobalConfig = {
             label: 'Logo',
             type: 'upload',
             relationTo: 'media',
-            required: true,
+            // required: true,
 
         },
         {
