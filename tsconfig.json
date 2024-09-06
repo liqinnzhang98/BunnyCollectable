@@ -30,7 +30,8 @@
         "./src/payload.config.ts"
       ]
     },
-    "target": "ES2017"
+    "target": "ES2017",
+    "types": ["node", "@types/bcryptjs"]
   },
   "include": [
     "next-env.d.ts",

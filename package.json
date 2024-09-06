@@ -20,8 +20,10 @@
     "@payloadcms/plugin-cloud": "beta",
     "@payloadcms/richtext-lexical": "beta",
     "@payloadcms/storage-s3": "beta",
+    "bcryptjs": "^2.4.3",
     "cross-env": "^7.0.3",
     "graphql": "^16.8.1",
+    "jsonwebtoken": "^9.0.2",
     "next": "15.0.0-canary.104",
     "payload": "beta",
     "react": "19.0.0-rc-06d0b89e-20240801",
@@ -29,6 +31,7 @@
     "sharp": "0.32.6"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20.14.9",
     "@types/react": "npm:types-react@19.0.0-rc.0",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.0",
