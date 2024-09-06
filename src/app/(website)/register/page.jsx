@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/api/register', {
+    const response = await fetch('.\api\registerHandler', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -32,6 +32,7 @@ const Register = () => {
       console.log('User registered successfully', data);
     } else {
       // Show error
+      console.log('wrong');
       setErrorMessage(data.message);
     }
   };
